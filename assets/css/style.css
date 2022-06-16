@@ -8,11 +8,12 @@
 
 .banner {
   position: relative;
+  height: 100vh;
 }
 
 .banner_image {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -29,8 +30,8 @@
   align-items: center;
   background-color: rgb(48, 48, 48, 0.5);
   color: #fff;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
 }
 
 .title .left_div {
@@ -58,7 +59,7 @@
 }
 
 .book_image {
-  width: 400px;
+  width: 300px;
 }
 
 #subscribe {
