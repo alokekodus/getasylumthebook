@@ -33,23 +33,18 @@
   -webkit-backdrop-filter: blur(5px);
 }
 
-.title h1 {
-  font-size: 4rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  animation: spacing 4s infinite;
+.title .left_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes spacing {
-  0% {
-    letter-spacing: 10px;
-  }
-  50% {
-    letter-spacing: 15px;
-  }
- 100% {
-    letter-spacing: 10px;
-  }
+.title .left_div h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 15px;
 }
 
 .heading {
@@ -58,8 +53,12 @@
   font-weight: 400;
 }
 
-.title p {
+.title .left_div p {
   font-weight: 500;
+}
+
+.book_image {
+  width: 400px;
 }
 
 #subscribe {
@@ -74,19 +73,19 @@
   border-radius: 0;
 }
 
-.btn-subscribe{
-    background-color: #111;
-    color: #fff;
-    border-radius: 0;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding: 10px 20px;
+.btn-subscribe {
+  background-color: #111;
+  color: #fff;
+  border-radius: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 20px;
 }
 
-.btn-subscribe:hover{
-    background-color: #fff;
-    color: #111;
+.btn-subscribe:hover {
+  background-color: #fff;
+  color: #111;
 }
 
 .author_socials {
@@ -116,9 +115,9 @@
   border-radius: 50%;
 }
 
-.author_signature{
-    width: 200px;
-    margin: 10px 0;
+.author_signature {
+  width: 200px;
+  margin: 10px 0;
 }
 
 .footer {
@@ -128,6 +127,7 @@
 }
 
 .footer ul {
+  padding-left: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
