@@ -16,125 +16,96 @@
   </head>
   <body>
     <section class="banner">
-      <img src="./assets/image/banner.jpg" class="banner_image" alt="banner" />
-
       <div class="title">
-        <div class="row g-0">
-            <div class="col-lg-6 left_div">
-                <h1>An Asylum by Myself</h1>
-                <p>By <span>Mark Bordoloi</span></p>
-                <a href="#subscribe" class="btn btn-subscribe fs-5 shadow"
-                  >Subscribe</a
-                >
+        <div class="col-md-12">
+          <div class="row g-0">
+            <div class="col-lg-6 d-flex justify-content-center align-items-center order-2 order-lg-1">
+              <div class="left_div">
+                <h1 class="mb-3">Subscribe for pre order</h1>
+                <form action="#" id="subscribeForm">
+                  <div class="row mb-3">
+                    <div class="col">
+                      <label for="fname" class="visually-hidden form-label"
+                        >First name<sup>*</sup></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="fname"
+                        placeholder="First name*"
+                      />
+                    </div>
+
+                    <div class="col">
+                      <label for="lname" class="visually-hidden form-label"
+                        >Last name<sup>*</sup></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lname"
+                        placeholder="Last name*"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="country" class="visually-hidden form-label"
+                      >Country<sup>*</sup></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="country"
+                      placeholder="Country*"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="visually-hidden form-label"
+                      >Email<sup>*</sup></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="email"
+                      placeholder="Email*"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="phone" class="visually-hidden form-label"
+                      >Phone (optional)</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="phone"
+                      placeholder="Phone number (Optional)"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="comment" class="visually-hidden form-label"
+                      >Comment (Optional)</label
+                    >
+                    <textarea
+                      class="form-control"
+                      name="comment"
+                      id="comment"
+                      rows="3"
+                      placeholder="Comment (Optional)"
+                    ></textarea>
+                  </div>
+
+                  <button class="btn btn-subscribe shadow" id="subscribeBtn">Subscribe</button>
+                </form>
               </div>
-  
-              <div class="col-lg-6">
-                <img class="book_image" src="./assets/image/book.png" alt="" />
-              </div>
-        </div>
-      </div>
-    </section>
+            </div>
 
-    <section id="subscribe">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 d-flex flex-column justify-content-center">
-            <h4 class="mb-3 heading">
-              subscribe <br />
-              <span class="fw-bold fst-italic text-secondary"
-                >An Asylum by Myself</span
-              >
-            </h4>
-            <p class="text-muted">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is more-or-less normal distribution of
-              letters, as opposed to using'Content here,content here',making it
-              like readable English. Many desktop publishing packages and web
-              page editors now.
-            </p>
-          </div>
-
-          <!-- Form -->
-          <div class="col-lg-6">
-            <form action="#" id="subscribeForm">
-              <div class="row mb-3">
-                <div class="col">
-                  <label for="fname" class="visually-hidden form-label"
-                    >First name<sup>*</sup></label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="fname"
-                    placeholder="First name"
-                  />
-                </div>
-
-                <div class="col">
-                  <label for="lname" class="visually-hidden form-label"
-                    >Last name<sup>*</sup></label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="lname"
-                    placeholder="Last name"
-                  />
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="country" class="visually-hidden form-label"
-                  >Country<sup>*</sup></label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="country"
-                  placeholder="Country"
-                />
-              </div>
-
-              <div class="mb-3">
-                <label for="email" class="visually-hidden form-label"
-                  >Email<sup>*</sup></label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="email"
-                  placeholder="Email"
-                />
-              </div>
-
-              <div class="mb-3">
-                <label for="phone" class="visually-hidden form-label"
-                  >Phone (optional)</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="phone"
-                  placeholder="Phone number"
-                />
-              </div>
-
-              <div class="mb-3">
-                <label for="comment" class="visually-hidden form-label"
-                  >Comment</label
-                >
-                <textarea
-                  class="form-control"
-                  name="comment"
-                  id="comment"
-                  rows="3"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-
-              <button class="btn btn-subscribe shadow">Subscribe</button>
-            </form>
+            <div class="col-lg-6 order-1 order-lg-2">
+              <img class="book_image" src="./assets/image/book.png" alt="Book cover" />
+            </div>
           </div>
         </div>
       </div>
@@ -163,24 +134,35 @@
 
           <div class="author_socials">
             <div>
-              <a href="https://www.facebook.com/MarkBordoloiMotivationalSpeaker" target="_blank"
+              <a
+                href="https://www.facebook.com/MarkBordoloiMotivationalSpeaker"
+                target="_blank"
                 ><i class="social_icon fa-brands fa-facebook-f"></i
               ></a>
             </div>
             <div>
-              <a href="https://twitter.com/mbordoloii" target="_blank"><i class="social_icon fa-brands fa-twitter"></i></a>
+              <a href="https://twitter.com/mbordoloii" target="_blank"
+                ><i class="social_icon fa-brands fa-twitter"></i
+              ></a>
             </div>
             <div>
-              <a href="https://www.linkedin.com/company/mark-bordoloi-d3-motivation/" target="_blank"><i class="social_icon fa-brands fa-linkedin"></i></a>
+              <a
+                href="https://www.linkedin.com/company/mark-bordoloi-d3-motivation/"
+                target="_blank"
+                ><i class="social_icon fa-brands fa-linkedin"></i
+              ></a>
             </div>
             <div>
-              <a href="https://mark-bordoloi.com/" target="_blank"><i class="social_icon fa-solid fa-globe"></i></a>
+              <a href="https://mark-bordoloi.com/" target="_blank"
+                ><i class="social_icon fa-solid fa-globe"></i
+              ></a>
             </div>
           </div>
         </div>
 
         <div class="col-lg-6 d-flex justify-content-center align-items-center">
-          <img class="author_imge"
+          <img
+            class="author_imge"
             src="./assets/image/mark.png"
             alt="Mark bordoloi"
           />
@@ -191,9 +173,19 @@
     <section class="footer text-center text-uppercase">
       <p class="fw-bold text-white fs-4">An Asylum by Myself</p>
       <ul id="social">
-        <li><a href="https://www.facebook.com/anasylumbymyself" target="_blank">Facebook</a></li>
-        <li><a href="https://twitter.com/aabm_mark" target="_blank">Twitter</a></li>
-        <li><a href="https://instagram.com/anasylumbymyself" target="_blank">Instagram</a></li>
+        <li>
+          <a href="https://www.facebook.com/anasylumbymyself" target="_blank"
+            >Facebook</a
+          >
+        </li>
+        <li>
+          <a href="https://twitter.com/aabm_mark" target="_blank">Twitter</a>
+        </li>
+        <li>
+          <a href="https://instagram.com/anasylumbymyself" target="_blank"
+            >Instagram</a
+          >
+        </li>
       </ul>
       <ul id="contact">
         <li>
@@ -205,9 +197,16 @@
       <hr class="text-white" />
 
       <p class="mb-0 text-center copyright_text">
-        Copyright© <a href="http://mark-bordoloi.com/" target="_blank" class="text-white">Mark Bordoloi</a> 2022. All right reserved
+        Copyright©
+        <a href="http://mark-bordoloi.com/" target="_blank" class="text-white"
+          >Mark Bordoloi</a
+        >
+        2022. All right reserved
       </p>
     </section>
     <script src="./vendor/bootstrap5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="./vendor/jquery3/jquery.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
