@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>An Asylum by Myself - By Mark Bordoloi</title>
     <link rel="stylesheet" href="./vendor/bootstrap5.2/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="./vendor/fontawesome6/fontawesome.css">
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
@@ -32,6 +26,7 @@
                         type="text"
                         class="form-control"
                         id="fname"
+                        name="fname"
                         placeholder="First name*"
                       />
                     </div>
@@ -44,6 +39,7 @@
                         type="text"
                         class="form-control"
                         id="lname"
+                        name="lname"
                         placeholder="Last name*"
                       />
                     </div>
@@ -57,6 +53,7 @@
                       type="text"
                       class="form-control"
                       id="country"
+                      name="country"
                       placeholder="Country*"
                     />
                   </div>
@@ -69,6 +66,7 @@
                       type="text"
                       class="form-control"
                       id="email"
+                      name="email"
                       placeholder="Email*"
                     />
                   </div>
@@ -81,6 +79,7 @@
                       type="text"
                       class="form-control"
                       id="phone"
+                      name="phone"
                       placeholder="Phone number (Optional)"
                     />
                   </div>
@@ -91,8 +90,8 @@
                     >
                     <textarea
                       class="form-control"
-                      name="comment"
                       id="comment"
+                      name="comment"
                       rows="3"
                       placeholder="Comment (Optional)"
                     ></textarea>
@@ -206,7 +205,7 @@
     </section>
     <script src="./vendor/bootstrap5.2/js/bootstrap.bundle.min.js"></script>
     <script src="./vendor/jquery3/jquery.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./vendor/sweetalert2/sweetalert.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
