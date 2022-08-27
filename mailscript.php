@@ -34,7 +34,7 @@ if (empty($_POST['fname'])) {
    $mail->Username = "noreply@ekodusproject.tech";
    $mail->Password = "Developer@123";
 
-   $mail->AddAddress("getasylumthebook@gmail.com", "Pre Order");
+   $mail->AddAddress("alok.deka@ekodus.com", "Pre Order");
    $mail->SetFrom($_POST["email"], $_POST["name"]);
    $mail->AddReplyTo($_POST["email"], $_POST["name"]);
 
