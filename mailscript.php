@@ -21,14 +21,10 @@ if (isset($_POST['email'])) {
       echo json_encode($return);
    }
 
-   $to = $_POST['email'];
+   $to = check_input($_POST["email"]);
    $subject = "Pre Subscribe Form";
-   
+
    sendMail($to, $subject);
-} else {
-   $return['msgType'] = false;
-   $return['msg'] = "Something went wrong!";
-   echo json_encode($return);
 }
 
 // Function form mail send
