@@ -6,7 +6,6 @@ $("#subscribeForm").on("submit", function (e) {
 function submitForm() {
   let btn = $("#subscribeBtn");
   btn.html("Please wait...");
-  btn.prop('disabled', true);
   let formData = $("#subscribeForm").serialize();
 
   // AJAX submit
@@ -25,7 +24,6 @@ function submitForm() {
         text: data.msg,
       }).then(() => {
         btn.html("Subscribe");
-        btn.prop('disabled', false);
         $("#subscribeForm")[0].reset();
       });
     } else {
@@ -35,7 +33,6 @@ function submitForm() {
         text: data.msg,
       }).then(() => {
         btn.html("Subscribe");
-        btn.prop('disabled', false);
       });
     }
 
