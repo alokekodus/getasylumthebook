@@ -1,21 +1,21 @@
 <?php
 
-if (isset($_POST['subscribe'])) {
+if (isset($_POST['email'])) {
 
    // Check inputs if empty
-   if ($_POST['fname'] == '') {
+   if (empty($_POST['fname'])) {
       $return['msgType'] = false;
       $return['msg'] = "Please enter first name";
       echo json_encode($return);
-   } else if ($_POST['lname'] == '') {
+   } else if (empty($_POST['lname'])) {
       $return['msgType'] = false;
       $return['msg'] = "Please enter last name";
       echo json_encode($return);
-   } else if ($_POST['country'] == '') {
+   } else if (empty($_POST['country'])) {
       $return['msgType'] = false;
       $return['msg'] = "Please enter your country name";
       echo json_encode($return);
-   } else if ($_POST['email'] == '') {
+   } else if (empty($_POST['email'])) {
       $return['msgType'] = false;
       $return['msg'] = "Please enter your email";
       echo json_encode($return);
@@ -29,6 +29,10 @@ if (isset($_POST['subscribe'])) {
    $message .= "Message: " . check_input($_POST["comment"]) . "<br/>";
 
    sendMail($email, "Pre Subscribe Form", $message);
+} else {
+   $return['msgType'] = false;
+   $return['msg'] = "Something went wrong!";
+   echo json_encode($return);
 }
 
 // Function form mail send
