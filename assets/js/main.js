@@ -22,7 +22,7 @@ function submitForm() {
       Swal.fire({
         icon: "success",
         title: "Success",
-        text: "Thank you for subscribe",
+        text: data.msg,
       }).then(() => {
         btn.html("Subscribe");
         btn.prop('disable', false);
@@ -32,7 +32,7 @@ function submitForm() {
       Swal.fire({
         icon: "error",
         title: "Error",
-        text: "Failed to subscribe",
+        text: data.msg,
       }).then(() => {
         btn.html("Subscribe");
         btn.prop('disable', false);
