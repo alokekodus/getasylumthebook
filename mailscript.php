@@ -17,7 +17,7 @@ $mail->Host       = "mail.ekodusproject.tech";
 $mail->Username = "noreply@ekodusproject.tech";
 $mail->Password = "Developer@123";
 
-$mail->AddAddress("alok.deka@ekodus.com", "Get Asylum The Book");
+$mail->AddAddress("getasylumthebook@gmail.com", "Get Asylum The Book");
 $mail->SetFrom($_POST["email"], $_POST["name"]);
 $mail->AddReplyTo($_POST["email"], $_POST["name"]);
 
