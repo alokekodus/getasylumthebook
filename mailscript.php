@@ -1,5 +1,13 @@
 <?php
 
+function check_input($data)
+{
+   $data = trim($data);
+   $data = stripslashes($data);
+   $data = htmlspecialchars($data);
+   return $data;
+}
+
 // Only process POST reqeusts.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
    // Check inputs if empty
@@ -42,11 +50,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       $mail->IsHTML(true);
 
-      $MESSAGE_BODY = "Name: ".check_input($_POST["fname"])." ".check_input($_POST["lname"])."<br/>";
-      $MESSAGE_BODY .= "Country: ".check_input($_POST["country"])."<br/>";
-      $MESSAGE_BODY .= "Email: ".check_input($_POST["email"])."<br/>";
-      $MESSAGE_BODY .= "Phone Number: ".check_input($_POST["phone"])."<br/>";
-      $MESSAGE_BODY .= "Message: ".check_input($_POST["comment"])."<br/>";
+      $MESSAGE_BODY = "Name: " . check_input($_POST["fname"]) . " " . check_input($_POST["lname"]) . "<br/>";
+      $MESSAGE_BODY .= "Country: " . check_input($_POST["country"]) . "<br/>";
+      $MESSAGE_BODY .= "Email: " . check_input($_POST["email"]) . "<br/>";
+      $MESSAGE_BODY .= "Phone Number: " . check_input($_POST["phone"]) . "<br/>";
+      $MESSAGE_BODY .= "Message: " . check_input($_POST["comment"]) . "<br/>";
 
       $mail->Subject = "Pre Subscribe Form";
       $mail->Body = $MESSAGE_BODY;
@@ -59,14 +67,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          $return['msgType'] = true;
          $return['msg'] = "Thank you for subscribe";
          echo json_encode($return);
-      }
-
-      function check_input($data)
-      {
-         $data = trim($data);
-         $data = stripslashes($data);
-         $data = htmlspecialchars($data);
-         return $data;
       }
    }
 } else {
