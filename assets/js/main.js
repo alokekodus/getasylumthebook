@@ -5,7 +5,8 @@ $("#subscribeForm").on("submit", function (e) {
 
 function submitForm() {
   let btn = $("#subscribeBtn");
-  btn.text("Please wait...");
+  btn.html("Please wait...");
+  btn.prop('disable', true);
   let formData = $("#subscribeForm").serialize();
 
   // AJAX submit
@@ -21,9 +22,10 @@ function submitForm() {
       Swal.fire({
         icon: "success",
         title: "Success",
-        text: "Than you for subscribe",
+        text: "Thank you for subscribe",
       }).then(() => {
-        btn.text("Subscribe");
+        btn.html("Subscribe");
+        btn.prop('disable', false);
         $("#subscribeForm")[0].reset();
       });
     } else {
@@ -32,7 +34,8 @@ function submitForm() {
         title: "Error",
         text: "Failed to subscribe",
       }).then(() => {
-        btn.text("Subscribe");
+        btn.html("Subscribe");
+        btn.prop('disable', false);
       });
     }
 
