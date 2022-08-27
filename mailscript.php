@@ -21,14 +21,7 @@ if (isset($_POST['email'])) {
       echo json_encode($return);
    }
 
-   $message = "";
-   $message .= "Name: " . check_input($_POST["fname"]) . " " . check_input($_POST["lname"]) . "<br/>";
-   $message .= "Country: " . check_input($_POST["country"]) . "<br/>";
-   $message .= "Email: " . check_input($_POST["email"]) . "<br/>";
-   $message .= "Phone Number: " . check_input($_POST["phone"]) . "<br/>";
-   $message .= "Message: " . check_input($_POST["comment"]) . "<br/>";
-
-   sendMail($_POST['email'], "Pre Subscribe Form", $message);
+   sendMail($_POST['email'], "Pre Subscribe Form");
 } else {
    $return['msgType'] = false;
    $return['msg'] = "Something went wrong!";
@@ -36,7 +29,7 @@ if (isset($_POST['email'])) {
 }
 
 // Function form mail send
-function sendMail($to, $subject, $message)
+function sendMail($to, $subject)
 {
    require("mail/class.phpmailer.php");
 
@@ -59,6 +52,11 @@ function sendMail($to, $subject, $message)
 
    $mail->IsHTML(true);
 
+   $message = "Name: " . check_input($_POST["fname"]) . " " . check_input($_POST["lname"]) . "<br/>";
+   $message .= "Country: " . check_input($_POST["country"]) . "<br/>";
+   $message .= "Email: " . check_input($_POST["email"]) . "<br/>";
+   $message .= "Phone Number: " . check_input($_POST["phone"]) . "<br/>";
+   $message .= "Message: " . check_input($_POST["comment"]) . "<br/>";
 
    $mail->Subject = $subject;
    $mail->Body = $message;
