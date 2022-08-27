@@ -23,9 +23,6 @@ if (isset($_POST['email'])) {
 
 
    // Send mail
-   $to = check_input($_POST["email"]);
-   $subject = "Pre Subscribe Form";
-
    require("mail/class.phpmailer.php");
 
    $mail = new PHPMailer();
@@ -42,8 +39,8 @@ if (isset($_POST['email'])) {
    $mail->Password = "Developer@123";
 
    $mail->AddAddress("getasylumthebook@gmail.com", "Get Asylum The Book");
-   $mail->SetFrom($to, "Get Asylum The Book");
-   $mail->AddReplyTo($to, $_POST["name"]);
+   $mail->SetFrom($_POST["email"], "Get Asylum The Book");
+   $mail->AddReplyTo($_POST["email"], $_POST["name"]);
 
    $mail->IsHTML(true);
 
@@ -53,7 +50,7 @@ if (isset($_POST['email'])) {
    $MESSAGE_BODY .= "Phone Number: " . check_input($_POST["phone"]) . "<br/>";
    $MESSAGE_BODY .= "Message: " . check_input($_POST["comment"]) . "<br/>";
 
-   $mail->Subject = $subject;
+   $mail->Subject = "Pre Subscribe Form";
    $mail->Body = $MESSAGE_BODY;
 
    if (!$mail->Send()) {
