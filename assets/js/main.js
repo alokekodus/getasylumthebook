@@ -15,7 +15,7 @@ function submitForm() {
     url: "mailscript.php",
     data: formData,
     dataType: "json",
-    async: false,
+    async: true,
     encode: true,
   }).done(function (data) {
     if (data["msgType"] == true) {
