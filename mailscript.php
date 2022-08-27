@@ -21,15 +21,11 @@ if (isset($_POST['email'])) {
       echo json_encode($return);
    }
 
+
+   // Send mail
    $to = check_input($_POST["email"]);
    $subject = "Pre Subscribe Form";
 
-   sendMail($to, $subject);
-}
-
-// Function form mail send
-function sendMail($to, $subject)
-{
    require("mail/class.phpmailer.php");
 
    $mail = new PHPMailer();
@@ -51,14 +47,14 @@ function sendMail($to, $subject)
 
    $mail->IsHTML(true);
 
-   $message = "Name: " . check_input($_POST["fname"]) . " " . check_input($_POST["lname"]) . "<br/>";
-   $message .= "Country: " . check_input($_POST["country"]) . "<br/>";
-   $message .= "Email: " . check_input($_POST["email"]) . "<br/>";
-   $message .= "Phone Number: " . check_input($_POST["phone"]) . "<br/>";
-   $message .= "Message: " . check_input($_POST["comment"]) . "<br/>";
+   $MESSAGE_BODY = "Name: " . check_input($_POST["fname"]) . " " . check_input($_POST["lname"]) . "<br/>";
+   $MESSAGE_BODY .= "Country: " . check_input($_POST["country"]) . "<br/>";
+   $MESSAGE_BODY .= "Email: " . check_input($_POST["email"]) . "<br/>";
+   $MESSAGE_BODY .= "Phone Number: " . check_input($_POST["phone"]) . "<br/>";
+   $MESSAGE_BODY .= "Message: " . check_input($_POST["comment"]) . "<br/>";
 
    $mail->Subject = $subject;
-   $mail->Body = $message;
+   $mail->Body = $MESSAGE_BODY;
 
    if (!$mail->Send()) {
       $return['msgType'] = false;
