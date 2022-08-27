@@ -28,7 +28,7 @@ if (isset($_POST['email'])) {
    $message .= "Phone Number: " . check_input($_POST["phone"]) . "<br/>";
    $message .= "Message: " . check_input($_POST["comment"]) . "<br/>";
 
-   sendMail($email, "Pre Subscribe Form", $message);
+   sendMail($_POST['email'], "Pre Subscribe Form", $message);
 } else {
    $return['msgType'] = false;
    $return['msg'] = "Something went wrong!";
