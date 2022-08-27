@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $mail->Password = "Developer@123";
 
       $mail->AddAddress("getasylumthebook@gmail.com", "Pre Order");
-      $mail->SetFrom($_POST["email"], $_POST["name"]);
+      $mail->SetFrom("noreply@ekodusproject.tech");
       $mail->AddReplyTo($_POST["email"], $_POST["name"]);
 
       $mail->IsHTML(true);
