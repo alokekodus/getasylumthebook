@@ -40,12 +40,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $mail->SMTPAuth   = true;
       $mail->SMTPSecure = "ssl";
       $mail->Port       = 465;
-      $mail->Host       = "mail.ekodusproject.tech";
-      $mail->Username = "noreply@ekodusproject.tech";
+      $mail->Host       = "mail.getasylumthebook.com";
+      $mail->Username = "noreply@getasylumthebook.com";
       $mail->Password = "Developer@123";
 
       $mail->AddAddress("getasylumthebook@gmail.com", "Pre Order");
-      $mail->SetFrom("noreply@ekodusproject.tech");
+      $mail->SetFrom("noreply@getasylumthebook.com");
       $mail->AddReplyTo($_POST["email"], $_POST["name"]);
 
       $mail->IsHTML(true);
