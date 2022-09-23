@@ -60,6 +60,7 @@
 }
 
 #subscribeForm .form-control[type="text"],
+#subscribeForm .form-control[type="email"],
 #subscribeForm .form-select {
   height: 45px;
 }
