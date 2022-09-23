@@ -2,6 +2,7 @@
   .title .left_div {
     background-color: unset;
     padding: 20px;
+    width: 100%;
   }
 
   .title .left_div h1 {
